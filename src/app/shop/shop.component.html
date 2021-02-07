@@ -1,0 +1,7 @@
+<p *ngIf="shopService.items">Shop contains: {{shopService.items.length}} product(s)</p>
+<p *ngIf="shopService.cart">
+    You have {{shopService.cart.length}} product(s) in your cart.
+    <a [routerLink]="['/shop/shopping-cart']">View cart</a>
+</p>
+<p *ngIf="!shopService.items">Shop is closed!</p>
+<app-product *ngFor="let product of shopService.items" [product]="product" [isCartMode]="false"></app-product>

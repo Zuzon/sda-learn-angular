@@ -1,0 +1,16 @@
+<form [formGroup]="loginService.form">
+    <div>
+        <label for="login">Login</label><br>
+        <input id="login" type="text" formControlName="login" />
+        <div *ngIf="loginService.form.controls.login.touched == true && loginService.form.controls.login.errors != null">
+            <div *ngIf="loginService.form.controls.login.errors.required">This field is required</div>
+            <div *ngIf="loginService.form.controls.login.errors.email">Should be valid email address</div>
+        </div>
+    </div>
+    <div>
+        <label for="psw">Password</label><br>
+        <input id="psw" type="password" formControlName="password" />
+    </div>
+    <button (click)="submit()" [ngClass]="{ 'green': loginService.form.status == 'VALID' }">Login</button>
+    <span *ngIf="loginService.form.status == 'VALID'">Form is ready for submission</span>
+</form>

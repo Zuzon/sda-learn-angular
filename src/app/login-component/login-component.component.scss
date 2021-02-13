@@ -1,0 +1,18 @@
+label, input {
+    margin: 10px;
+}
+input {
+    &.ng-touched {
+        &.ng-invalid {
+            border-color: red;
+        }
+        &.ng-valid {
+            border-color: limegreen;
+        }
+    }
+}
+
+button.green {
+    background: #0e8d0e;
+    color: white;
+}

@@ -1,5 +1,9 @@
-<h1>Mans pirmais projekts</h1>
-
+<h1>{{ currentDate | date:'HH:mm:ss' }}</h1>
+<button (click)="showQuickLogin(true)">quick login</button>
+<div *ngIf="isQuickLoginShown" class="mini-login">
+    <button (click)="showQuickLogin(false)">X</button>
+    <app-login-component></app-login-component>
+</div>
 <app-menu></app-menu>
 
 <router-outlet></router-outlet>

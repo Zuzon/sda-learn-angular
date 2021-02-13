@@ -2,6 +2,7 @@ import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
 import { Lapa1Component } from './lapa1/lapa1.component';
 import { Lapa2Component } from './lapa2/lapa2.component';
+import { LoginComponent } from './login-component/login.component';
 import { CartComponent } from './shop/cart/cart.component';
 import { ShopComponent } from './shop/shop.component';
 
@@ -21,6 +22,10 @@ const routes: Routes = [
   {
     path: 'shop/shopping-cart',
     component: CartComponent
+  },
+  {
+    path: 'login',
+    component: LoginComponent
   }
 ];
 

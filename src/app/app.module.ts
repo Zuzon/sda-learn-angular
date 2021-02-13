@@ -11,6 +11,10 @@ import { ShopService } from './services/shop.service';
 import { CartComponent } from './shop/cart/cart.component';
 import { ProductComponent } from './shop/product/product.component';
 import { ShopComponent } from './shop/shop.component';
+import { LoginComponent } from './login-component/login.component';
+import { TestComponent } from './test/test.component';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
+import { LoginService } from './services/login.service';
 
 @NgModule({
   declarations: [
@@ -20,15 +24,20 @@ import { ShopComponent } from './shop/shop.component';
     MenuComponent,
     ShopComponent,
     CartComponent,
-    ProductComponent
+    ProductComponent,
+    LoginComponent,
+    TestComponent
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+    FormsModule,
+    ReactiveFormsModule
   ],
   providers: [
     CounterService,
-    ShopService
+    ShopService,
+    LoginService
   ],
   bootstrap: [AppComponent]
 })
